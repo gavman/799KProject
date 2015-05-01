@@ -2,7 +2,6 @@ function [ features ] = train_model( im, pos, consts )
 %% Train the model used to identify characters
 
 %% Do thresholding, turn positions into bounding boxes
-%im = threshold(im, consts);
 bbs = [pos(:,1) pos(:,3), pos(:,2)-pos(:,1), pos(:,4)-pos(:,3)];
 
 %% Debug -- show output
